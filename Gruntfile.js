@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             },
             build: {
                 src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                dest: 'site/src/<%= pkg.name %>.min.js'
             }
         },
         connect: {
@@ -25,9 +25,10 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks("grunt-contrib-uglify-es");
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask("default", ["uglify"]);
+    grunt.registerTask("run", ["uglify", "connect"])
 };
