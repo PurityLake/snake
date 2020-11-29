@@ -71,7 +71,7 @@ function create() {
         0x550000).setAltFillStyle(0xFF0000).setOrigin(0, 0);
     
     var [x, y] = getXYFromIndex(snake.tileX, snake.tileY);
-    snake = new Snake(x - tileSize / 2, y - tileSize / 2grunt);
+    snake = new Snake(x - tileSize / 2, y - tileSize / 2);
     snake.tileX = Math.floor(tilesX / 2);
     snake.tileY = Math.floor(tilesY / 2);
 
